@@ -1,0 +1,69 @@
+<html>
+	<header>
+		<title>MobFrete</title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	</header>
+	<body>
+		<!--Barra do menu lateral -->
+		<div class="menu">
+			<div class="barra b1">
+				<IMG src="img/logo_vertical.png" width="55%" class="imgLogo" >
+				
+				<div class="menuNavegacao" onfocusout="hideSetas()">
+					<div class="imgDown"><IMG src="img/down.png"  width="60%"  ></div>
+					<div class="linkNovoChamado">
+						<label>Novo Chamado</label>
+					</div>
+					<div class="icones">
+						<a href="#"><img src="img/moto_boy.png"  class="imgIconMotoBy" onmouseover="changeIcon('motoboy')" ></a>
+						<img src="img/seta_right.png"  id="setaMotoBoy">
+						<a href="#"><img src="img/van.png"  class="imgIconVan" onmouseover="changeIcon('van')"></a>
+						<img src="img/seta_right.png"   id="setaVan">
+						<a href="#"><img src="img/carreto.png"  class="imgIconCarreto" onmouseover="changeIcon('carreto')"></a>
+						<img src="img/seta_right.png"  id="setaCarreto">		
+					</div>
+											
+				</div>
+			</div>
+			<div class="barra b2"></div>
+			<div class="barra b3"></div>
+		</div>
+		<div class="menuLogin">
+			<div class="menuLoginBody">
+				<IMG src="img/login_usuario.png" class="imgMenuLoginBody">
+				<IMG src="img/login.png" class="imgLoginMenuLoginBody">
+			</div>
+			<div class="menuLoginBodyFacebook"></div>
+		</div>
+		<div class="imagem">
+			<IMG src="img/foto_inst.jpg" width="100%" height="100%" >
+		</div>
+
+	</body>
+	<script type="text/javascript">
+	
+	hideSetas();
+
+		function hideSetas() {
+			$("#setaMotoBoy").hide();
+			$("#setaVan").hide();
+			$("#setaCarreto").hide();
+		};
+	
+		function changeIcon (tipo) {
+			hideSetas();
+
+			if(tipo == "motoboy"){
+				$("#setaMotoBoy").show();
+			} else if(tipo == "van"){
+				$("#setaVan").show();	
+			} else if(tipo == "carreto"){
+				$("#setaCarreto").show();	
+			} 
+		  
+		}
+		
+	</script>
+</html>
